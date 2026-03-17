@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "kala"
+version = "0.1.0"
+description = "Kala: AI Temporal Experience - Research into how LLMs represent and reason about time"
+authors = [{name = "Mukunda Katta"}]
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+kala = "kala.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
